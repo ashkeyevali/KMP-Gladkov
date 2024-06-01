@@ -13,8 +13,12 @@ dependencies {
     implementation(Dependencies.Android.gradlePlugin)
     implementation(Dependencies.Kotlin.gradlePlugin)
     implementation(Dependencies.Compose.gradlePlugin)
+    implementation(Dependencies.Kotlin.Serialization.gradlePlugin)
+//    implementation(Dependencies.SqlDelight.gradlePlugin)
 }
 
 kotlin {
-    sourceSets.getByName("main").kotlin.srcDir("buildSrc/main/kotlin")
+    sourceSets.getByName("main").kotlin.srcDir("buildSrc/src/main/kotlin")
+
 }
+
