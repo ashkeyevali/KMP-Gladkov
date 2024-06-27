@@ -8,6 +8,7 @@ import io.ktor.client.plugins.logging.LogLevel
 import io.ktor.client.plugins.logging.Logger
 import io.ktor.client.plugins.logging.Logging
 import io.ktor.client.plugins.logging.SIMPLE
+import io.ktor.client.request.header
 import io.ktor.serialization.kotlinx.json.json
 import kotlinx.serialization.json.Json
 
@@ -35,7 +36,9 @@ internal val KtorModule = DI.Module("ktorModule") {
             }
 
             defaultRequest {
-                url("https://playzone-backend.herokuapp.com/")
+                url("http://10.0.2.2:5232/")
+                header("Content-Type", "application/json")
+                header("Bearer-Authorization", "61b4c38f-8b35-45da-9de6-8c47b5a3234f")
             }
 
         }

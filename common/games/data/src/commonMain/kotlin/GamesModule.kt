@@ -7,7 +7,7 @@ import org.kodein.di.provider
 import org.kodein.di.singleton
 import sqldelight.SqlDelightGamesDataSource
 
-internal val GamesModule = DI.Module("gamesModule") {
+val gamesModule = DI.Module("gamesModule") {
     bind<GamesRepository>() with singleton { GamesRepositoryImpl(instance(), instance()) }
 
     bind<KtorGamesDataSource>() with provider { KtorGamesDataSource(instance()) }

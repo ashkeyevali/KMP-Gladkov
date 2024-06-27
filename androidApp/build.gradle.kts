@@ -40,6 +40,8 @@ android {
 
 dependencies {
     implementation(projects.common.umbrellaCompose)
+    implementation(projects.common.core)
+    implementation(projects.common.games.api)
     implementation(libs.compose.ui)
     implementation(libs.compose.ui.tooling.preview)
     implementation(libs.compose.material3)
