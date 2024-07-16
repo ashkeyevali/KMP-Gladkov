@@ -20,9 +20,10 @@ object PlatformSdk {
         Inject.createDependencies(
             DI.direct {
                importAll(
+                   umbrellaModule,
                    coreModule,
                    gamesModule,
-                   umbrellaModule
+                   authModule
                )
             }
         )

@@ -1,6 +1,5 @@
 package com.example.playzone_mobiledev.android
 
-import PlatformSdk
 import android.app.Application
 import platform.PlatformConfiguration
 

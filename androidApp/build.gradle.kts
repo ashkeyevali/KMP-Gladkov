@@ -1,6 +1,7 @@
 plugins {
     id(libs.plugins.androidApplication.get().pluginId)
     id(libs.plugins.kotlinAndroid.get().pluginId)
+    id(libs.plugins.compose.get().pluginId)
 }
 
 android {
@@ -17,7 +18,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = libs.versions.compose.compiler.get()
+        kotlinCompilerExtensionVersion = "1.5.4"
     }
     packaging {
         resources {
@@ -39,6 +40,7 @@ android {
 }
 
 dependencies {
+    implementation(projects.common.umbrellaCore)
     implementation(projects.common.umbrellaCompose)
     implementation(projects.common.core)
     implementation(projects.common.games.api)
