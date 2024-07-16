@@ -1,13 +1,12 @@
 plugins{
     id("multiplatform-setup")
     id("android-setup")
+    id("multiplatform-compose-setup")//todo delete it
     kotlin("plugin.serialization")
     id("app.cash.sqldelight") version "2.0.1"
 }
 
 kotlin {
-    task("testClasses")
-
     sourceSets.commonMain.dependencies {
         api(Dependencies.Kotlin.Coroutines.core)
         api(Dependencies.Kotlin.Serialization.serializarion)
@@ -18,8 +17,8 @@ kotlin {
         implementation(Dependencies.Ktor.seralization)
 
         api(Dependencies.Kodein.core)
-        implementation(Dependencies.SqlDelight.coroutines)
-        implementation(Dependencies.SqlDelight.runtime)
+//        implementation(Dependencies.SqlDelight.coroutines)
+//        implementation(Dependencies.SqlDelight.runtime)
 
     }
 
@@ -31,12 +30,12 @@ kotlin {
 
     sourceSets.iosMain.dependencies {
         implementation(Dependencies.Ktor.ios)
-        implementation(Dependencies.SqlDelight.native)
+//        implementation(Dependencies.SqlDelight.native)
     }
 
     sourceSets.desktopMain.dependencies {
         implementation(Dependencies.Ktor.okhttp)
-        implementation(Dependencies.SqlDelight.jvm)
+//        implementation(Dependencies.SqlDelight.jvm)
 
     }
 
