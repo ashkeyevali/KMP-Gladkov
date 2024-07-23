@@ -44,6 +44,7 @@ class LoginViewModel: BaseSharedViewModel<LoginViewState, LoginAction, LoginEven
                         email = "", password = "",
                         isSending = false
                     )
+                    viewAction = LoginAction.OpenMainFlow
                 } else {
                     viewState = viewState.copy(
                         isSending = false
