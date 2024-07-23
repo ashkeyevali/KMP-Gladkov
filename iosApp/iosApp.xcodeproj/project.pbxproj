@@ -19,6 +19,13 @@
 		881ECF052C4D42F200CD0726 /* Flow+Publisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881ECF042C4D42F200CD0726 /* Flow+Publisher.swift */; };
 		881ECF072C4D469800CD0726 /* ViewModel+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881ECF062C4D469800CD0726 /* ViewModel+View.swift */; };
 		881ECF092C4EC0F800CD0726 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881ECF082C4EC0F800CD0726 /* LoginScreen.swift */; };
+		885C155F2C5019F900414562 /* RegistrationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885C155E2C5019F900414562 /* RegistrationScreen.swift */; };
+		885C15622C501A3C00414562 /* ForgotPasswordScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885C15612C501A3C00414562 /* ForgotPasswordScreen.swift */; };
+		885C15652C501B7700414562 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885C15642C501B7700414562 /* MainView.swift */; };
+		885C156B2C501BE800414562 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885C156A2C501BE800414562 /* HomeScreen.swift */; };
+		885C156D2C501BF400414562 /* SearchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885C156C2C501BF400414562 /* SearchScreen.swift */; };
+		885C156F2C501C0500414562 /* EventsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885C156E2C501C0500414562 /* EventsScreen.swift */; };
+		885C15712C501C1700414562 /* VideosScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885C15702C501C1700414562 /* VideosScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +44,13 @@
 		881ECF042C4D42F200CD0726 /* Flow+Publisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Flow+Publisher.swift"; sourceTree = "<group>"; };
 		881ECF062C4D469800CD0726 /* ViewModel+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewModel+View.swift"; sourceTree = "<group>"; };
 		881ECF082C4EC0F800CD0726 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		885C155E2C5019F900414562 /* RegistrationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationScreen.swift; sourceTree = "<group>"; };
+		885C15612C501A3C00414562 /* ForgotPasswordScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordScreen.swift; sourceTree = "<group>"; };
+		885C15642C501B7700414562 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		885C156A2C501BE800414562 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		885C156C2C501BF400414562 /* SearchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreen.swift; sourceTree = "<group>"; };
+		885C156E2C501C0500414562 /* EventsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsScreen.swift; sourceTree = "<group>"; };
+		885C15702C501C1700414562 /* VideosScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosScreen.swift; sourceTree = "<group>"; };
 		B0D679FCC9D4B6FD7C245ABF /* Pods-iosApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosApp.release.xcconfig"; path = "Target Support Files/Pods-iosApp/Pods-iosApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,6 +119,13 @@
 		881ECEF72C46D98900CD0726 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				885C15692C501BC900414562 /* Videos */,
+				885C15682C501BB100414562 /* Events */,
+				885C15672C501B9B00414562 /* Search */,
+				885C15662C501B8F00414562 /* Home */,
+				885C15632C501B5600414562 /* Main */,
+				885C15602C501A2400414562 /* ForgotPassword */,
+				885C155D2C5019C800414562 /* Registration */,
 				881ECEF82C46D99900CD0726 /* Login */,
 			);
 			path = Screens;
@@ -136,6 +157,62 @@
 				881ECF012C4BD90400CD0726 /* ActionButton.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		885C155D2C5019C800414562 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				885C155E2C5019F900414562 /* RegistrationScreen.swift */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		885C15602C501A2400414562 /* ForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+				885C15612C501A3C00414562 /* ForgotPasswordScreen.swift */,
+			);
+			path = ForgotPassword;
+			sourceTree = "<group>";
+		};
+		885C15632C501B5600414562 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				885C15642C501B7700414562 /* MainView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		885C15662C501B8F00414562 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				885C156A2C501BE800414562 /* HomeScreen.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		885C15672C501B9B00414562 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				885C156C2C501BF400414562 /* SearchScreen.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		885C15682C501BB100414562 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				885C156E2C501C0500414562 /* EventsScreen.swift */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		885C15692C501BC900414562 /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+				885C15702C501C1700414562 /* VideosScreen.swift */,
+			);
+			path = Videos;
 			sourceTree = "<group>";
 		};
 		95D326ABC4F6BEAFD2F41C37 /* Frameworks */ = {
@@ -261,12 +338,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				881ECEFA2C46D9C700CD0726 /* LoginView.swift in Sources */,
+				885C156F2C501C0500414562 /* EventsScreen.swift in Sources */,
+				885C15652C501B7700414562 /* MainView.swift in Sources */,
 				881ECF072C4D469800CD0726 /* ViewModel+View.swift in Sources */,
+				885C156D2C501BF400414562 /* SearchScreen.swift in Sources */,
+				885C155F2C5019F900414562 /* RegistrationScreen.swift in Sources */,
 				881ECF092C4EC0F800CD0726 /* LoginScreen.swift in Sources */,
+				885C15712C501C1700414562 /* VideosScreen.swift in Sources */,
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
+				885C156B2C501BE800414562 /* HomeScreen.swift in Sources */,
 				881ECEFD2C4847CB00CD0726 /* Color+Custom.swift in Sources */,
 				881ECF002C484DEC00CD0726 /* CommonTextField.swift in Sources */,
 				7555FF83242A565900829871 /* ContentView.swift in Sources */,
+				885C15622C501A3C00414562 /* ForgotPasswordScreen.swift in Sources */,
 				881ECF052C4D42F200CD0726 /* Flow+Publisher.swift in Sources */,
 				881ECF022C4BD90400CD0726 /* ActionButton.swift in Sources */,
 			);
