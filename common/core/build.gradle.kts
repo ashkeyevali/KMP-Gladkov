@@ -17,6 +17,9 @@ kotlin {
         implementation(Dependencies.Ktor.seralization)
 
         api(Dependencies.Kodein.core)
+
+        implementation(Dependencies.Settings.core)
+        implementation(Dependencies.Settings.noargs)
 //        implementation(Dependencies.SqlDelight.coroutines)
 //        implementation(Dependencies.SqlDelight.runtime)
 

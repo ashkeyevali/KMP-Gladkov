@@ -19,6 +19,7 @@
 		881ECF052C4D42F200CD0726 /* Flow+Publisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881ECF042C4D42F200CD0726 /* Flow+Publisher.swift */; };
 		881ECF072C4D469800CD0726 /* ViewModel+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881ECF062C4D469800CD0726 /* ViewModel+View.swift */; };
 		881ECF092C4EC0F800CD0726 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881ECF082C4EC0F800CD0726 /* LoginScreen.swift */; };
+		8853496F2C56A14100EF9134 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8853496E2C56A14100EF9134 /* HomeView.swift */; };
 		885C155F2C5019F900414562 /* RegistrationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885C155E2C5019F900414562 /* RegistrationScreen.swift */; };
 		885C15622C501A3C00414562 /* ForgotPasswordScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885C15612C501A3C00414562 /* ForgotPasswordScreen.swift */; };
 		885C15652C501B7700414562 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885C15642C501B7700414562 /* MainView.swift */; };
@@ -26,6 +27,7 @@
 		885C156D2C501BF400414562 /* SearchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885C156C2C501BF400414562 /* SearchScreen.swift */; };
 		885C156F2C501C0500414562 /* EventsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885C156E2C501C0500414562 /* EventsScreen.swift */; };
 		885C15712C501C1700414562 /* VideosScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885C15702C501C1700414562 /* VideosScreen.swift */; };
+		88B6400F2C595F42000D1603 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B6400E2C595F42000D1603 /* SearchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,7 @@
 		881ECF042C4D42F200CD0726 /* Flow+Publisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Flow+Publisher.swift"; sourceTree = "<group>"; };
 		881ECF062C4D469800CD0726 /* ViewModel+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewModel+View.swift"; sourceTree = "<group>"; };
 		881ECF082C4EC0F800CD0726 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		8853496E2C56A14100EF9134 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		885C155E2C5019F900414562 /* RegistrationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationScreen.swift; sourceTree = "<group>"; };
 		885C15612C501A3C00414562 /* ForgotPasswordScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordScreen.swift; sourceTree = "<group>"; };
 		885C15642C501B7700414562 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -51,6 +54,7 @@
 		885C156C2C501BF400414562 /* SearchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreen.swift; sourceTree = "<group>"; };
 		885C156E2C501C0500414562 /* EventsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsScreen.swift; sourceTree = "<group>"; };
 		885C15702C501C1700414562 /* VideosScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosScreen.swift; sourceTree = "<group>"; };
+		88B6400E2C595F42000D1603 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		B0D679FCC9D4B6FD7C245ABF /* Pods-iosApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosApp.release.xcconfig"; path = "Target Support Files/Pods-iosApp/Pods-iosApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -187,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				885C156A2C501BE800414562 /* HomeScreen.swift */,
+				8853496E2C56A14100EF9134 /* HomeView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -195,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				885C156C2C501BF400414562 /* SearchScreen.swift */,
+				88B6400E2C595F42000D1603 /* SearchView.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -342,10 +348,12 @@
 				885C15652C501B7700414562 /* MainView.swift in Sources */,
 				881ECF072C4D469800CD0726 /* ViewModel+View.swift in Sources */,
 				885C156D2C501BF400414562 /* SearchScreen.swift in Sources */,
+				8853496F2C56A14100EF9134 /* HomeView.swift in Sources */,
 				885C155F2C5019F900414562 /* RegistrationScreen.swift in Sources */,
 				881ECF092C4EC0F800CD0726 /* LoginScreen.swift in Sources */,
 				885C15712C501C1700414562 /* VideosScreen.swift in Sources */,
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
+				88B6400F2C595F42000D1603 /* SearchView.swift in Sources */,
 				885C156B2C501BE800414562 /* HomeScreen.swift in Sources */,
 				881ECEFD2C4847CB00CD0726 /* Color+Custom.swift in Sources */,
 				881ECF002C484DEC00CD0726 /* CommonTextField.swift in Sources */,

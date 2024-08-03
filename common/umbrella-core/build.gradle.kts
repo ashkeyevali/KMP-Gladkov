@@ -11,6 +11,7 @@ kotlin{
                 implementation(projects.common.core)
                 implementation(projects.common.auth.data)
                 implementation(projects.common.games.data)
+                implementation(projects.common.main.data)
             }
         }
     }

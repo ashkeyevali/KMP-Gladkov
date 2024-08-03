@@ -11,4 +11,14 @@ object NavigationTree {
         Register,
         ForgotPassword
     }
+
+    enum class Main {
+        Dashboard,
+        Home,
+        Search,
+        Videos,
+        Events,
+        Profile,
+        Game
+    }
 }
