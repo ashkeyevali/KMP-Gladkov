@@ -16,6 +16,7 @@ kotlin{
                 implementation(projects.common.tournaments.data)
                 implementation(projects.common.auth.data)
                 implementation(projects.common.auth.compose)
+                implementation(projects.common.main.compose)
                 implementation(Dependencies.Other.KViewModel.odyssey)
                 implementation(Dependencies.Other.KViewModel.compose)
                 implementation(Dependencies.Other.KViewModel.core)

@@ -23,6 +23,7 @@ object PlatformSdk {
                    umbrellaModule,
                    coreModule,
                    gamesModule,
+                   mainModule,
                    authModule
                )
             }

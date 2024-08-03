@@ -12,8 +12,21 @@ import login.models.LoginViewState
 class LoginViewModel: BaseSharedViewModel<LoginViewState, LoginAction, LoginEvent>(
     initialState = LoginViewState(email = "", password = "")
 ) {
-
     private val authRepository: AuthRepository = Inject.instance()
+
+
+    init {
+        isUserLoggedIn()
+    }
+
+
+
+
+    private fun isUserLoggedIn() {
+        if(authRepository.isUserLoggedIn()) {
+            viewAction = LoginAction.OpenMainFlow
+        }
+    }
     override fun obtainEvent(viewEvent: LoginEvent) {
         when(viewEvent){
             is LoginEvent.LoginClicked -> sendLogin()
