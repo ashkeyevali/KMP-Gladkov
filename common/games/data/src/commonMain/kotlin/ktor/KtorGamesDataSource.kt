@@ -8,8 +8,10 @@ import io.ktor.client.request.request
 import io.ktor.client.request.setBody
 import io.ktor.http.path
 import io.ktor.util.InternalAPI
+import ktor.models.CreateGameInfoRequest
 import ktor.models.KtorSearchGame
 import ktor.models.KtorSearchRequest
+import model.CreateGameInfo
 import model.Game
 
 class KtorGamesDataSource(private val httpClient: HttpClient) {
@@ -29,6 +31,16 @@ class KtorGamesDataSource(private val httpClient: HttpClient) {
             url {
                 path("games/search")
                 setBody( KtorSearchRequest(searchQuery = ""))
+            }
+        }.body()
+        return response
+    }
+
+    suspend fun createGame(info: CreateGameInfoRequest): KtorSearchGame {
+        val response: KtorSearchGame = httpClient.post {
+            url {
+                path("games/create")
+                setBody(info)
             }
         }.body()
         return response

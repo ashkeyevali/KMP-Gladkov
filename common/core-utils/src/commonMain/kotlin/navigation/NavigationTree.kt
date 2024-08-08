@@ -21,4 +21,8 @@ object NavigationTree {
         Profile,
         Game
     }
+
+    enum class Admin {
+        Dashboard, Games, Events, CreateGame
+    }
 }

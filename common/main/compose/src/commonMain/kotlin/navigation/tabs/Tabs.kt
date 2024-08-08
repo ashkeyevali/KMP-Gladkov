@@ -72,12 +72,12 @@ class  VideosTab: TabItem() {
         }
 }
 
-class  DashboardTab: TabItem() {
+class GamesTab: TabItem() {
     override val configuration: TabConfiguration
         @Composable
         get()  {
             return TabConfiguration(
-                title = "Dashboard",
+                title = "Games",
                 selectedColor = Theme.colors.primaryAction,
                 unselectedColor = Theme.colors.hintTextColor,
                 titleStyle = TextStyle(

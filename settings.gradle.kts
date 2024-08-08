@@ -16,6 +16,7 @@ dependencyResolutionManagement {
 
 rootProject.name = "playzone-mobileDev"
 include(":androidApp")
+include(":desktop")
 include(":shared")
 // adding feature modules
 include(":common:auth:api")

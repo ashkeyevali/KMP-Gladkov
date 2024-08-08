@@ -36,10 +36,10 @@ internal val KtorModule = DI.Module("ktorModule") {
             }
 
             defaultRequest {
-                url("http://10.0.2.2:5232/")//android
+                url("http://10.0.2.2:5233/")//android
 //                url("http://127.0.0.1:5232/")//ios
                 header("Content-Type", "application/json")
-                header("Bearer-Authorization", "61b4c38f-8b35-45da-9de6-8c47b5a3234f")
+                header("Bearer-Authorization", "bf8487ae-7d47-11ec-90d6-0242ac120003")//admin token
             }
 
         }
