@@ -14,7 +14,9 @@ kotlin {
 
         framework {
             transitiveExport = false
+            binaryOption("bundleId", "com.example.playzone_mobiledev.sharedsdk")
             baseName = "SharedSDK"
+            linkerOpts("-lsqlite3")
             export(projects.common.core)
             export(projects.common.coreUtils)
             export(projects.common.umbrellaCore)

@@ -7,10 +7,28 @@ class GamesRepositoryImpl(
     private val localDataSource: SqlDelightGamesDataSource
 ): GamesRepository {
     override suspend fun fetchAllGames(): List<Game> {
-        return remoteDataSource.fetchAllGames().map { it.mapToGame() }
+        val localgames = localDataSource.fetchLocalGames()
+        return if(localgames.isNotEmpty()) {
+            return localgames.map { Game(it.game_id, it.game_title) }
+        } else {
+            val remote = remoteDataSource.fetchAllGames()
+            remote.forEach {
+                localDataSource.insertGame(it)
+            }
+            remote.map { it.mapToGame() }
+        }
     }
 
     override suspend fun searchGame(query: String): List<Game> {
-        return remoteDataSource.searchGame(query).map { it.mapToGame() }
+        val localgames = localDataSource.fetchLocalGames()
+        return if(localgames.isNotEmpty()) {
+            return localgames.map { Game(it.game_id, it.game_title) }
+        } else {
+            val remote = remoteDataSource.fetchAllGames()
+            remote.forEach {
+                localDataSource.insertGame(it)
+            }
+            remote.map { it.mapToGame() }
+        }
     }
 }
