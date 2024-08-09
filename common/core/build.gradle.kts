@@ -20,8 +20,8 @@ kotlin {
 
         implementation(Dependencies.Settings.core)
         implementation(Dependencies.Settings.noargs)
-//        implementation(Dependencies.SqlDelight.coroutines)
-//        implementation(Dependencies.SqlDelight.runtime)
+        implementation(Dependencies.SqlDelight.coroutines)
+        implementation(Dependencies.SqlDelight.runtime)
 
     }
 
@@ -33,12 +33,12 @@ kotlin {
 
     sourceSets.iosMain.dependencies {
         implementation(Dependencies.Ktor.ios)
-//        implementation(Dependencies.SqlDelight.native)
+        implementation(Dependencies.SqlDelight.native)
     }
 
     sourceSets.desktopMain.dependencies {
         implementation(Dependencies.Ktor.okhttp)
-//        implementation(Dependencies.SqlDelight.jvm)
+        implementation(Dependencies.SqlDelight.jvm)
 
     }
 
@@ -51,7 +51,10 @@ kotlin {
 sqldelight {
     databases {
         create("PlayzoneDatabase") {
-            packageName = "database"
+            packageName = "com.mobiledeveloper.playzone"
+            schemaOutputDirectory = file("src/commonMain/sqldelight/database/scheme")
+            migrationOutputDirectory = file("src/commonMain/sqldelight/database/migrations")
+
         }
 
     }
