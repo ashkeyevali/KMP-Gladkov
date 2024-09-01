@@ -1,7 +1,5 @@
 plugins {
     id("multiplatform-setup")
-    id("android-setup")
-    id("multiplatform-compose-setup")//todo delete it
 }
 
 kotlin {
@@ -11,7 +9,7 @@ kotlin {
                 api(projects.common.auth.api)
                 api(projects.common.games.api)
                 api(projects.common.core)
-                implementation(Dependencies.Other.KViewModel.core)
+                implementation(libs.kviewmodel.core)
             }
         }
     }

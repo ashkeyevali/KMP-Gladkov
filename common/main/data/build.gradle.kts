@@ -1,16 +1,14 @@
 
 plugins {
     id("multiplatform-setup")
-    id("android-setup")
-    id("multiplatform-compose-setup")//todo delete it
-    kotlin("plugin.serialization")
+    id(libs.plugins.serialization.get().pluginId)
 }
 
 kotlin{
     sourceSets.commonMain.dependencies{
         api(project(":common:main:api"))
         implementation(project(":common:core"))
-        api(Dependencies.Kotlin.Serialization.serializarion)
+        api(libs.serialization.core)
     }
 }
 

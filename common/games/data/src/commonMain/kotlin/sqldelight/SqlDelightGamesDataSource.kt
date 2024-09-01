@@ -1,7 +1,7 @@
 package sqldelight
 
 import com.mobiledeveloper.playzone.PlayzoneDatabase
-import database.GAMES
+import com.mobiledeveloper.playzone.database.GAMES
 import ktor.models.KtorSearchGame
 class SqlDelightGamesDataSource(private val dataBase: PlayzoneDatabase) {
     fun fetchLocalGames(): List<GAMES> {
