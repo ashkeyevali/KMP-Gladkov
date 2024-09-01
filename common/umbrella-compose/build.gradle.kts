@@ -1,7 +1,5 @@
 plugins{
-    id("multiplatform-compose-setup")
     id("multiplatform-setup")
-    id("android-setup")
 }
 
 kotlin{
@@ -17,16 +15,14 @@ kotlin{
                 implementation(projects.common.auth.data)
                 implementation(projects.common.auth.compose)
                 implementation(projects.common.main.compose)
-                implementation(Dependencies.Other.KViewModel.odyssey)
-                implementation(Dependencies.Other.KViewModel.compose)
-                implementation(Dependencies.Other.KViewModel.core)
-                implementation(Dependencies.Other.OdysseyNavigation.core)
-                implementation(Dependencies.Other.OdysseyNavigation.compose)
+                implementation(libs.kviewmodel.odyssey)
+                implementation(libs.odyssey.core)
+                implementation(libs.odyssey.compose)
             }
         }
 
         androidMain.dependencies {
-            implementation(Dependencies.Android.composeActivity)
+            implementation(libs.androidx.activity.compose)
 
         }
     }

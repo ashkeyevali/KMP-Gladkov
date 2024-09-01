@@ -1,6 +1,4 @@
 plugins {
-    id("multiplatform-compose-setup")
-    id("android-setup")
     id("multiplatform-setup")
 }
 
@@ -12,18 +10,17 @@ kotlin {
                 implementation(projects.common.coreCompose)
                 implementation(projects.common.coreUtils)
 
-                implementation(Dependencies.Other.KViewModel.core)
-                implementation(Dependencies.Other.KViewModel.compose)
-                implementation(Dependencies.Other.KViewModel.odyssey)
+                implementation(libs.kviewmodel.odyssey)
+                implementation(libs.kviewmodel.compose)
 
-                implementation(Dependencies.Other.OdysseyNavigation.core)
-                implementation(Dependencies.Other.OdysseyNavigation.compose)
+                implementation(libs.odyssey.core)
+                implementation(libs.odyssey.compose)
             }
         }
         androidMain {
             dependencies {
-                implementation(Dependencies.Image.Coil.core)
-                implementation(Dependencies.Image.Coil.compose)
+                implementation(libs.coil.core)
+                implementation(libs.coil.compose)
             }
         }
     }
