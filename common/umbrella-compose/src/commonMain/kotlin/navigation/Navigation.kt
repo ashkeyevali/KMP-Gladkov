@@ -7,7 +7,7 @@ import ru.alexgladkov.odyssey.compose.extensions.screen
 import ru.alexgladkov.odyssey.compose.navigation.RootComposeBuilder
 
 
-fun RootComposeBuilder.generateGraph() {
+fun RootComposeBuilder.navigationGraph() {
     screen(name = NavigationTree.SplashNavigation.Splash.name) {
         SplashScreen()
     }

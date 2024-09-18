@@ -1,32 +1,119 @@
+import org.jetbrains.compose.desktop.application.dsl.TargetFormat
+import org.jetbrains.kotlin.gradle.dsl.KotlinJsCompile
+import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
+
 plugins {
     id(libs.plugins.compose.get().pluginId)
     id(libs.plugins.kotlinMultiplatform.get().pluginId)
     id(libs.plugins.androidApplication.get().pluginId)
+    id(libs.plugins.kotlinCocoapods.get().pluginId)
 }
 
+version = "0.0.1"
+
 kotlin {
+
+    cocoapods{
+        summary = "PlayZone IOS sdk"
+        homepage = "https://github.com/ashkeyevali/KMP-Gladkov"
+        ios.deploymentTarget = "14.0"
+
+        framework {
+            transitiveExport = false
+            binaryOption("bundleId", "com.example.playzone_mobiledev.sharedsdk")
+            baseName = "SharedSDK"
+            linkerOpts("-lsqlite3")
+            export(projects.common.core)
+            export(projects.common.coreUtils)
+            export(projects.common.umbrellaCore)
+            export(projects.common.auth.api)
+            export(projects.common.auth.presentation)
+            export(projects.common.games.api)
+            export(projects.common.main.api)
+            export(projects.common.main.presentation)
+//            export(projects.common.games.presentation)
+
+        }
+    }
+
+
     jvmToolchain(17)
     androidTarget()
+    jvm()
+    js {
+        moduleName = "composeApp"
+        browser {
+            commonWebpackConfig {
+                outputFileName = "composeApp.js"
+            }
+        }
+        binaries.executable()
+    }
+    listOf(
+        iosArm64(),
+        iosX64(),
+        iosSimulatorArm64()
+    ).forEach {
+        it.binaries.framework {
+            baseName = "ComposeApp"
+            isStatic = false
+        }
+    }
+
+
+    targets.withType<KotlinNativeTarget> {
+        binaries{
+            all{
+                linkerOpts("-lsqlite3")
+            }
+        }}
+
      sourceSets {
          commonMain.dependencies {
              implementation(projects.common.umbrellaCore)
              implementation(projects.common.umbrellaCompose)
              implementation(projects.common.core)
+             implementation(projects.common.coreCompose)
              implementation(projects.common.games.api)
 
-             implementation(libs.compose.ui)
-             implementation(libs.compose.ui.tooling.preview)
-             implementation(libs.compose.material3)
-             implementation(libs.androidx.activity.compose)
+             //comment on desktop build compose
+             implementation(compose.ui)
+             implementation(compose.foundation)
+             implementation(compose.material)
+             implementation(compose.material3)
+//             implementation(libs.compose.ui)
+//             implementation(libs.compose.ui.tooling.preview)
+//             implementation(libs.compose.material3)
+//             implementation(libs.compose.foundation)
+//             implementation(libs.androidx.activity.compose)
 
              implementation(libs.odyssey.compose)
              implementation(libs.odyssey.core)
 //             debugImplementation(libs.compose.ui.tooling)
          }
 
+         jvmMain.dependencies {
+             implementation(compose.desktop.currentOs)
+         }
+
          androidMain.dependencies {
              implementation(libs.androidx.appcompat)
                 implementation(libs.androidx.activity.compose)
+         }
+
+         iosMain.dependencies {
+             api(projects.common.core)
+             api(projects.common.coreUtils)
+             api(projects.common.umbrellaCore)
+             api(projects.common.auth.api)
+             api(projects.common.auth.presentation)
+             api(projects.common.games.api)
+             api(projects.common.main.api)
+             api(projects.common.main.presentation)
+//        api(projects.common.games.presentation)
+         }
+         jsMain.dependencies {
+             implementation(compose.html.core)
          }
      }
 }
@@ -62,7 +149,20 @@ android {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
-//    kotlinOptions {
-//        jvmTarget = "17"
-//    }
+}
+
+compose.desktop {
+    application {
+        mainClass = "Main_desktopKt"
+
+        nativeDistributions {
+            targetFormats(TargetFormat.Dmg, TargetFormat.Exe, TargetFormat.Deb)
+            packageName = "com.example.playzone_mobiledev.desktop"
+            packageVersion = "1.0.0"
+        }
+    }
+}
+
+compose.experimental {
+    web.application{ }
 }
