@@ -4,6 +4,7 @@ pluginManagement {
         google()
         gradlePluginPortal()
         mavenCentral()
+        mavenLocal()
         maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
     }
 }
@@ -12,6 +13,7 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        mavenLocal()
         maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
     }
 }
@@ -39,6 +41,5 @@ include(":common:main:compose")
 include(":common:core")
 include(":common:core-compose")
 include(":common:core-utils")
-include(":common:umbrella-ios")
 include(":common:umbrella-compose")
 include(":common:umbrella-core")
