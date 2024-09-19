@@ -81,6 +81,7 @@ kotlin {
              implementation(compose.foundation)
              implementation(compose.material)
              implementation(compose.material3)
+             implementation(compose.runtime)
 //             implementation(libs.compose.ui)
 //             implementation(libs.compose.ui.tooling.preview)
 //             implementation(libs.compose.material3)
@@ -89,6 +90,10 @@ kotlin {
 
              implementation(libs.odyssey.compose)
              implementation(libs.odyssey.core)
+
+             implementation(libs.kviewmodel.compose)
+             implementation(libs.kviewmodel.core)
+             implementation(libs.kviewmodel.odyssey)
 //             debugImplementation(libs.compose.ui.tooling)
          }
 

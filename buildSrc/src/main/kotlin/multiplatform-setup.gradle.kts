@@ -8,7 +8,6 @@ kotlin{
     applyDefaultHierarchyTemplate()
     js{
         browser()
-        binaries.executable()
     }
 
     jvm("desktop")
