@@ -6,7 +6,6 @@ import ru.alexgladkov.odyssey.compose.setup.OdysseyConfiguration
 import ru.alexgladkov.odyssey.compose.setup.setNavigationContent
 import theme.AppTheme
 import theme.Theme
-import navigation.navigationGraph
 
 
 fun MainViewController(): UIViewController =

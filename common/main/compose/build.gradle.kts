@@ -19,8 +19,8 @@ kotlin {
         }
         androidMain {
             dependencies {
-                implementation(libs.coil.core)
-                implementation(libs.coil.compose)
+//                implementation(libs.coil.core)
+//                implementation(libs.coil.compose)
             }
         }
     }

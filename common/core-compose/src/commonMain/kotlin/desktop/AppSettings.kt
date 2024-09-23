@@ -1,0 +1,4 @@
+package desktop
+
+class AppSettings {
+}

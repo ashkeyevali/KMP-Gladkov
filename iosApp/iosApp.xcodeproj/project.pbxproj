@@ -27,6 +27,8 @@
 		885C156D2C501BF400414562 /* SearchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885C156C2C501BF400414562 /* SearchScreen.swift */; };
 		885C156F2C501C0500414562 /* EventsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885C156E2C501C0500414562 /* EventsScreen.swift */; };
 		885C15712C501C1700414562 /* VideosScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885C15702C501C1700414562 /* VideosScreen.swift */; };
+		888D321B2C9C18DD00B4450F /* Main+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888D321A2C9C18DD00B4450F /* Main+SwiftUI.swift */; };
+		888D321D2CA05E6D00B4450F /* Test+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888D321C2CA05E6D00B4450F /* Test+SwiftUI.swift */; };
 		88B6400F2C595F42000D1603 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B6400E2C595F42000D1603 /* SearchView.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +56,8 @@
 		885C156C2C501BF400414562 /* SearchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreen.swift; sourceTree = "<group>"; };
 		885C156E2C501C0500414562 /* EventsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsScreen.swift; sourceTree = "<group>"; };
 		885C15702C501C1700414562 /* VideosScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosScreen.swift; sourceTree = "<group>"; };
+		888D321A2C9C18DD00B4450F /* Main+SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Main+SwiftUI.swift"; sourceTree = "<group>"; };
+		888D321C2CA05E6D00B4450F /* Test+SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Test+SwiftUI.swift"; sourceTree = "<group>"; };
 		88B6400E2C595F42000D1603 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		B0D679FCC9D4B6FD7C245ABF /* Pods-iosApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosApp.release.xcconfig"; path = "Target Support Files/Pods-iosApp/Pods-iosApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,6 +112,7 @@
 		7555FF7D242A565900829871 /* iosApp */ = {
 			isa = PBXGroup;
 			children = (
+				888D32192C9C184900B4450F /* Bindings */,
 				881ECEFE2C484DC700CD0726 /* Views */,
 				881ECEFB2C4847AB00CD0726 /* Utils */,
 				881ECEF72C46D98900CD0726 /* Screens */,
@@ -219,6 +224,15 @@
 				885C15702C501C1700414562 /* VideosScreen.swift */,
 			);
 			path = Videos;
+			sourceTree = "<group>";
+		};
+		888D32192C9C184900B4450F /* Bindings */ = {
+			isa = PBXGroup;
+			children = (
+				888D321A2C9C18DD00B4450F /* Main+SwiftUI.swift */,
+				888D321C2CA05E6D00B4450F /* Test+SwiftUI.swift */,
+			);
+			path = Bindings;
 			sourceTree = "<group>";
 		};
 		95D326ABC4F6BEAFD2F41C37 /* Frameworks */ = {
@@ -347,8 +361,10 @@
 				885C156F2C501C0500414562 /* EventsScreen.swift in Sources */,
 				885C15652C501B7700414562 /* MainView.swift in Sources */,
 				881ECF072C4D469800CD0726 /* ViewModel+View.swift in Sources */,
+				888D321B2C9C18DD00B4450F /* Main+SwiftUI.swift in Sources */,
 				885C156D2C501BF400414562 /* SearchScreen.swift in Sources */,
 				8853496F2C56A14100EF9134 /* HomeView.swift in Sources */,
+				888D321D2CA05E6D00B4450F /* Test+SwiftUI.swift in Sources */,
 				885C155F2C5019F900414562 /* RegistrationScreen.swift in Sources */,
 				881ECF092C4EC0F800CD0726 /* LoginScreen.swift in Sources */,
 				885C15712C501C1700414562 /* VideosScreen.swift in Sources */,

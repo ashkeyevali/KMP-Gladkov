@@ -24,7 +24,12 @@ struct LoginScreen: View {
             }
         }
         .sheet(isPresented: $isRegistrationPresented) { RegistrationScreen() }
-        .sheet(isPresented: $isForgotPresented) { ForgotPasswordScreen() }
+        .sheet(isPresented: $isForgotPresented) {
+//            ForgotPasswordScreen()
+            TestComposeView{
+                print("Test from outside")
+            }//compose screen in native IOS navigation
+        }
 
         .fullScreenCover(isPresented: $isMainPresented ) { MainView() }
         .onReceive(sharedPublisher(loginViewModel.viewActions())){action in
