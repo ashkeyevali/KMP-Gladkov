@@ -22,7 +22,6 @@ kotlin {
             transitiveExport = false
             binaryOption("bundleId", "com.example.playzone_mobiledev.sharedsdk")
             baseName = "SharedSDK"
-            linkerOpts("-lsqlite3")
             export(projects.common.core)
             export(projects.common.coreUtils)
             export(projects.common.umbrellaCore)
@@ -35,7 +34,6 @@ kotlin {
 
         }
     }
-
 
     jvmToolchain(17)
     androidTarget()
@@ -57,6 +55,7 @@ kotlin {
         it.binaries.framework {
             baseName = "ComposeApp"
             isStatic = false
+            linkerOpts.add("-lsqlite3")
         }
     }
 
@@ -71,10 +70,12 @@ kotlin {
      sourceSets {
          commonMain.dependencies {
              implementation(projects.common.umbrellaCore)
-             implementation(projects.common.umbrellaCompose)
              implementation(projects.common.core)
              implementation(projects.common.coreCompose)
+             implementation(projects.common.coreUtils)
              implementation(projects.common.games.api)
+             implementation(projects.common.auth.compose)
+             implementation(projects.common.main.compose)
 
              //comment on desktop build compose
              implementation(compose.ui)
@@ -82,6 +83,7 @@ kotlin {
              implementation(compose.material)
              implementation(compose.material3)
              implementation(compose.runtime)
+//             implementation(compose.preview)
 //             implementation(libs.compose.ui)
 //             implementation(libs.compose.ui.tooling.preview)
 //             implementation(libs.compose.material3)
@@ -103,7 +105,7 @@ kotlin {
 
          androidMain.dependencies {
              implementation(libs.androidx.appcompat)
-                implementation(libs.androidx.activity.compose)
+             implementation(libs.androidx.activity.compose)
          }
 
          iosMain.dependencies {

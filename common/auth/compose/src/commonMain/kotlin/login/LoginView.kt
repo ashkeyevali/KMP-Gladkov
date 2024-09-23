@@ -42,56 +42,15 @@ fun LoginView(state: LoginViewState, eventHandler: (LoginEvent) -> Unit) {
             text = "Welcome back to PlayZone! Enter your email addres and your password to enjoy the latest features of PlayZone",
             color = Theme.colors.hintTextColor, fontSize = 14.sp, textAlign = TextAlign.Center)
 
-        TextField(
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(56.dp),
-            value = state.email,
-            enabled = !state.isSending,
-            colors = TextFieldDefaults.textFieldColors(
-                backgroundColor = Color(0xFF1F2430),
-                textColor = Color(0xFF696C75),
-                cursorColor = Theme.colors.highlightTextColor,
-                focusedIndicatorColor = Color.Transparent,
-                unfocusedIndicatorColor = Color.Transparent
-            ),
-            placeholder = { Text(text = "Your login", color = Theme.colors.hintTextColor) },
-            shape = RoundedCornerShape(10.dp),
-            onValueChange = {
-                eventHandler(LoginEvent.EmailChanged(it))
-            })
-
-        Spacer(modifier = Modifier.height(24.dp))
-
-        TextField(
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(56.dp),
-            value = state.password,
-            enabled = !state.isSending,
-            colors = TextFieldDefaults.textFieldColors(
-                backgroundColor = Color(0xFF1F2430),
-                textColor = Color(0xFF696C75),
-                cursorColor = Theme.colors.highlightTextColor,
-                focusedIndicatorColor = Color.Transparent,
-                unfocusedIndicatorColor = Color.Transparent
-            ),
-            visualTransformation = if (state.passwordHidden) PasswordVisualTransformation() else VisualTransformation.None,
-            placeholder = { Text(text = "Your password", color = Theme.colors.hintTextColor) },
-            trailingIcon = {
-                Icon(
-                    imageVector = if (state.passwordHidden) Icons.Default.Lock else Icons.Default.Clear,
-                    contentDescription = "Password hidden",
-                    modifier = Modifier.clickable {
-                        eventHandler(LoginEvent.PasswordShowClicked)
-                                                  },
-                    tint = Theme.colors.hintTextColor,
-                )
-            },
-            shape = RoundedCornerShape(10.dp),
-            onValueChange = {
-                eventHandler(LoginEvent.PasswordChanged(it))
-            })
+        LoginInputView(
+            email = state.email,
+            password = state.password,
+            isSending = state.isSending,
+            isPasswordHidden = state.passwordHidden,
+            onEmailChange = { eventHandler(LoginEvent.EmailChanged(it)) },
+            onPasswordChange = { eventHandler(LoginEvent.PasswordChanged(it)) },
+            onShowPasswordClicked = { eventHandler(LoginEvent.PasswordShowClicked) }
+        )
 
         Spacer(modifier = Modifier.height(84.dp))
 
