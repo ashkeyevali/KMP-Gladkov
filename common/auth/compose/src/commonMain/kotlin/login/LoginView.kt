@@ -28,6 +28,7 @@ import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.playzone_mobiledev.common.auth.compose.AuthRes
 import login.models.LoginEvent
 import login.models.LoginViewState
 import theme.Theme
@@ -57,7 +58,7 @@ fun LoginView(state: LoginViewState, eventHandler: (LoginEvent) -> Unit) {
         Row(modifier = Modifier.fillMaxWidth()) {
             Spacer(modifier = Modifier.weight(1f))
             Text(
-                text = "Forgot your password?",
+                text = AuthRes.string.auth_forgot_password,
                 color = Theme.colors.primaryAction,
                 fontSize = 12.sp,
                 modifier = Modifier.clickable { eventHandler(LoginEvent.ForgotPasswordClicked) }
