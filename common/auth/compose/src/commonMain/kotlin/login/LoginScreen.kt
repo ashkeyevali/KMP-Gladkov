@@ -4,6 +4,8 @@ package login
 import androidx.compose.runtime.Composable
 import com.adeo.kviewmodel.compose.observeAsState
 import com.adeo.kviewmodel.odyssey.StoredViewModel
+import desktop.LocalAppSettings
+import desktop.WindowState
 import login.models.LoginAction
 import navigation.NavigationTree
 import register.RegisterScreen
@@ -22,11 +24,13 @@ fun LoginScreen () {
         LoginView(state = state.value) {
             viewModel.obtainEvent(it)
         }
+        val appSettings = LocalAppSettings.current
         when(actions.value) {
             is LoginAction.OpenRegisterScreen -> {
                 rootController.push(NavigationTree.AuthNavigation.Register.name)
             }
             is LoginAction.OpenForgotPasswordScreen -> {
+                appSettings.updateWindowState(WindowState.FullScreen)
                 rootController.push(NavigationTree.AuthNavigation.ForgotPassword.name)
             }
             is LoginAction.OpenMainFlow -> {
