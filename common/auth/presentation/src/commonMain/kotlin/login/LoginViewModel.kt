@@ -24,7 +24,7 @@ class LoginViewModel: BaseSharedViewModel<LoginViewState, LoginAction, LoginEven
 
     private fun isUserLoggedIn() {
         if(authRepository.isUserLoggedIn()) {
-            viewAction = LoginAction.OpenMainFlow
+//            viewAction = LoginAction.OpenMainFlow
         }
     }
     override fun obtainEvent(viewEvent: LoginEvent) {
